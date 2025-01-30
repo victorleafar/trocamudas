@@ -1,28 +1,25 @@
+#Site de Ecommerce para Venda de Plantas
 
-#Plant-Selling-Ecommerce-Website
+Crie um design completo e responsivo de um site de ecommerce para iniciantes usando HTML, CSS e JavaScript puro, passo a passo.
 
-Create a complete responsive online ecommerce website design for beginers using html css and vanilla javascript step by step.
+As principais características deste site são:
 
-The main feature of this website are:
+✔ Cabeçalho/Barra de navegação tripla responsiva e fixa com efeito de menu de alternância.
 
-✔ Responsive sticky triple header / navbar with toggle menu bar effect.
-   
-✔ Responsive shopping cart box.
+✔ Caixa de carrinho de compras responsiva.
 
-✔ Responsive home with touch slider effect using swipper.js
+✔ Página inicial responsiva com efeito de deslizar ao toque utilizando o Swiper.js.
 
-✔ Responsive banner card section using flexbox.
+✔ Seção de cartões de banner responsiva utilizando Flexbox.
 
-✔ Responsive category card section using flexbox.
+✔ Seção de cartões de categoria responsiva utilizando Flexbox.
 
-✔ Responsive product card section using flexbox.
+✔ Seção de cartões de produtos responsiva utilizando Flexbox.
 
-✔ Responsive deal section with count down effect using flexbox.
+✔ Seção de ofertas responsiva com efeito de contagem regressiva utilizando Flexbox.
 
-✔ Responsive and animated contact form section using flexbox.
+✔ Seção de formulário de contato responsiva e animada utilizando Flexbox.
 
-✔ Responsive footer section using flexbox.
-
-Resource: https://www.youtube.com/watch?v=OQbgfxff06s
+✔ Seção de rodapé responsiva utilizando Flexbox.
 
 Key: #Ecommerce-Website, #Plant-shop, #FrontEnd
