@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troca de Mudas</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Adicionando rolagem suave */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menu de Navegação -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">🌱 Troca de Mudas</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#categorias">Categorias</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Seção Home com Mensagem Estática Melhorada -->
+    <section class="home-message" id="home">
+      <h1>Encontre mudas próximas de você!</h1>
+      <p>Conecte-se com amantes da natureza em todo o Brasil.</p>
+      <button id="exploreNow" class="explore-now">Explore agora</button>
+    </section>
+
+    <!-- Seção Como Funciona com Interação -->
+    <section class="como-funciona-section" id="como-funciona">
+      <h2>Como Funciona</h2>
+      <ol>
+        <li>Escolha a muda que deseja.</li>
+        <li>Encontre vendedores próximos de você.</li>
+        <li>Receba a muda diretamente na sua casa.</li>
+        <li>Plante e cuide para um futuro sustentável!</li>
+      </ol>
+
+      <div class="interaction">
+        <button onclick="location.href='#tabela-mudas'">
+          Ver Mudas Disponíveis
+        </button>
+        <button
+          onclick="alert('Siga os passos no site para mais informações!')"
+        >
+          Saiba Mais
+        </button>
+      </div>
+    </section>
+
+    <!-- Seção de Categorias com Dropdown -->
+    <section id="categorias" class="dropdown-section">
+      <h2>Explore por Categorias</h2>
+      <label for="categorias-dropdown">Escolha uma categoria:</label>
+      <select id="categorias-dropdown" name="categorias">
+        <option value="frutiferas">Plantas Frutíferas</option>
+        <option value="ornamentais">Plantas Ornamentais</option>
+        <option value="medicinais">Plantas Medicinais</option>
+        <option value="suculentas">Suculentas</option>
+        <option value="outros">Outros Tipos</option>
+      </select>
+    </section>
+
+    <!-- Tabela de Mudas -->
+    <section class="tabela-mudas" id="tabela-mudas">
+      <h2>Confira nossas Mudas Disponíveis</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Imagem</th>
+            <th>Nome</th>
+            <th>Espécie</th>
+            <th>Preço</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT4Xu3tU8hUDutVrqsiH304deGLYbUztgzow&s"
+                alt="Muda 1"
+              />
+            </td>
+            <td>Muda 1</td>
+            <td>Espécie 1</td>
+            <td>R$ 20,00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT4Xu3tU8hUDutVrqsiH304deGLYbUztgzow&s"
+                alt="Muda 2"
+              />
+            </td>
+            <td>Muda 2</td>
+            <td>Espécie 2</td>
+            <td>R$ 30,00</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT4Xu3tU8hUDutVrqsiH304deGLYbUztgzow&s"
+                alt="Muda 3"
+              />
+            </td>
+            <td>Muda 3</td>
+            <td>Espécie 3</td>
+            <td>R$ 25,00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section id="contato" class="contact-section">
+      <h2>Entre em Contato</h2>
+      <form action="#">
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Seu nome"
+          required
+        />
+
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Seu e-mail"
+          required
+        />
+
+        <label for="assunto">Assunto:</label>
+        <input
+          type="text"
+          id="assunto"
+          name="assunto"
+          placeholder="Assunto"
+          required
+        />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea
+          id="mensagem"
+          name="mensagem"
+          placeholder="Sua mensagem"
+          required
+        ></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre-section">
+      <h2>Sobre</h2>
+      <p>
+        O projeto "Troca de Mudas" visa conectar pessoas que querem trocar ou
+        doar mudas de plantas. Nossa missão é promover o amor pela natureza e a
+        sustentabilidade, criando uma comunidade verde onde todos podem
+        compartilhar e aprender sobre o mundo das plantas.
+      </p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>© 2024 Troca de Mudas. Todos os direitos reservados.</p>
+      <p>
+        <a href="#" id="termsLink">Termos de Uso</a> |
+        <a href="#" id="privacyLink">Política de Privacidade</a>
+      </p>
+      <button id="backToTop" class="back-to-top">Voltar ao topo</button>
+    </footer>
+  </body>
+</html>
