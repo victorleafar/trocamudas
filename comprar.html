@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprar</title>
+    <link rel="stylesheet" href="css/comprar.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Voltar</a>
+        <a href="comprar.html">Comprar</a>
+      </nav>
+    </header>
+
+    <section id="products">
+      <h1>Produtos disponíveis</h1>
+
+      <div class="product" id="product-1">
+        <img
+          src="https://img.freepik.com/vetores-gratis/emoji-de-plantas_78370-262.jpg"
+          alt="Produto 1"
+        />
+        <h2>Produto 1</h2>
+        <p>Descrição do produto 1.</p>
+        <p>Preço: R$ 99,99</p>
+        <button
+          class="btn add-to-cart"
+          data-product="Produto 1"
+          data-price="99.99"
+        >
+          Adicionar ao carrinho
+        </button>
+      </div>
+
+      <div class="product" id="product-2">
+        <img
+          src="https://img.freepik.com/vetores-gratis/emoji-de-plantas_78370-262.jpg"
+          alt="Produto 2"
+        />
+        <h2>Produto 2</h2>
+        <p>Descrição do produto 2.</p>
+        <p>Preço: R$ 79,99</p>
+        <button
+          class="btn add-to-cart"
+          data-product="Produto 2"
+          data-price="79.99"
+        >
+          Adicionar ao carrinho
+        </button>
+      </div>
+
+      <!-- Adicione mais produtos conforme necessário -->
+    </section>
+
+    <section id="cart">
+      <h2>Resumo do Carrinho</h2>
+      <p id="cart-summary">Você ainda não adicionou nenhum produto.</p>
+      <a href="checkout.html" class="btn" id="checkout-btn">Finalizar Compra</a>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+  </body>
+</html>

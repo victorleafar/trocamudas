@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nome": "Samambaia",
+    "preco": 39.9,
+    "imagem": "imagens/samambaia.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Suculenta",
+    "preco": 19.9,
+    "imagem": "imagens/suculenta.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Bonsai",
+    "preco": 159.9,
+    "imagem": "imagens/bonsai.jpg"
+  }
+]

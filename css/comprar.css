@@ -1,0 +1,184 @@
+/* Resetando o estilo padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+html,
+body {
+  height: 100%; /* Garante que o HTML e o Body tenham altura total */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Garante que o conteúdo seja empurrado para o topo e o footer fique no final */
+}
+
+/* Cabeçalho */
+header {
+  background-color: #086008e7;
+  padding: 1rem;
+  text-align: center;
+}
+
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+header nav a:hover {
+  color: #f1f1f1;
+}
+
+/* Seção de Produtos */
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.product {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product .btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Seção de Carrinho */
+#cart {
+  background-color: white;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#cart h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#cart-summary {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#checkout-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#checkout-btn:hover {
+  background-color: #218838;
+}
+
+/* Rodapé */
+footer {
+  background-color: #086008e7;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  #products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  #cart {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header nav a {
+    font-size: 0.9rem;
+    margin: 0 10px;
+  }
+
+  #cart-summary {
+    font-size: 1rem;
+  }
+
+  #checkout-btn {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
