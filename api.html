@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA Image and Video Library</title>
+    <a href="index.html" class="voltar-link">Voltar</a>
+    <link rel="stylesheet" href="css/api.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>NASA Image and Video Library</h1>
+
+      <div class="search-bar">
+        <label for="search_query">Buscar (Exemplo: "Mars" ou "Moon"): </label>
+        <input type="text" id="search_query" name="search_query" />
+        <button onclick="searchMedia()">Buscar</button>
+      </div>
+
+      <div id="result"></div>
+    </div>
+
+    <script src="js/api.js"></script>
+  </body>
+</html>

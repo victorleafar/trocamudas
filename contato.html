@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avaliações</title>
+    <link rel="stylesheet" href="css/contato.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Voltar</a>
+        <a href="contato.html">Avaliações</a>
+      </nav>
+    </header>
+
+    <section id="contact">
+      <h1>Deixe sua avaliação</h1>
+      <form id="contactForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar avaliação</button>
+      </form>
+    </section>
+
+    <section id="reviews">
+      <h2>Avaliações dos usuários</h2>
+      <div id="avaliacoesContainer"></div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("contactForm");
+        const container = document.getElementById("avaliacoesContainer");
+
+        function carregarAvaliacoes() {
+          const avaliacoes =
+            JSON.parse(sessionStorage.getItem("avaliacoes")) || [];
+          container.innerHTML = "";
+
+          if (avaliacoes.length === 0) {
+            container.innerHTML = "<p>Ainda não há avaliações.</p>";
+          } else {
+            avaliacoes.forEach((avaliacao) => {
+              const div = document.createElement("div");
+              div.innerHTML = `
+                <hr>
+                <p><strong>Nome:</strong> ${avaliacao.name}</p>
+                <p><strong>Email:</strong> ${avaliacao.email}</p>
+                <p><strong>Mensagem:</strong> ${avaliacao.message}</p>
+              `;
+              container.appendChild(div);
+            });
+          }
+        }
+
+        carregarAvaliacoes();
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          if (name && email && message) {
+            let avaliacoes =
+              JSON.parse(sessionStorage.getItem("avaliacoes")) || [];
+            avaliacoes.push({ name, email, message });
+            sessionStorage.setItem("avaliacoes", JSON.stringify(avaliacoes));
+            carregarAvaliacoes();
+            form.reset();
+          } else {
+            alert("Por favor, preencha todos os campos.");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
